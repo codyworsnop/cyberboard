@@ -6,8 +6,8 @@ using System.Web;
 using System.Json;
 using System.Web.Mvc;
 using Newtonsoft.Json;
-using OAuthTwitterWrapper.JsonTypes;
 using System.Net;
+using OAuthTwitterWrapper.JsonTypes;
 
 namespace CyberBoard.Controllers
 {
@@ -16,11 +16,14 @@ namespace CyberBoard.Controllers
         public ActionResult Index()
         {
 
-            var tweet = new OAuthTwitterWrapper.OAuthTwitterWrapper();
-            var json = tweet.GetMyTimeline();
-            var tweets = JsonConvert.DeserializeObject<List<TimeLine>>(json);
+            var wrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
+            wrapper.SearchSettings.SearchQuery = "Cyber Security";
 
-            return View(tweets);
+            var results = wrapper.GetSearch();
+
+            var tweets = results == null ? null : JsonConvert.DeserializeObject<Search>(results);
+
+            return View(tweets.Results);
         }
 
         public ActionResult About()

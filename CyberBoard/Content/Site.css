@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #30353d;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -35,6 +36,7 @@ blockquote.twitter-tweet {
   box-shadow: 0 1px 3px rgba(0,0,0,0.15);
   font: bold 14px/18px Helvetica, Arial, sans-serif;
   color: #000;
+  width: 400px;
 }
 
 blockquote.twitter-tweet p {

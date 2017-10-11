@@ -83,4 +83,3 @@ c:\users\cody\documents\visual studio 2015\Projects\CyberBoard\CyberBoard\bin\Mi
 c:\users\cody\documents\visual studio 2015\Projects\CyberBoard\CyberBoard\obj\Debug\CyberBoard.csprojResolveAssemblyReference.cache
 c:\users\cody\documents\visual studio 2015\Projects\CyberBoard\CyberBoard\obj\Debug\CyberBoard.dll
 c:\users\cody\documents\visual studio 2015\Projects\CyberBoard\CyberBoard\obj\Debug\CyberBoard.pdb
-c:\users\cody\documents\visual studio 2015\Projects\CyberBoard\CyberBoard\bin\oAuthTwitterWrapper.dll

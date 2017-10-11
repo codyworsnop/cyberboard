@@ -4,18 +4,19 @@
     ViewBag.Title = "Home Page";
 }
 
+this is a text string that may or may not spane the entire screen and it would be cool if it just worked but things never just work so idk but any way here we go. lol it was hardly long enough so im adding more. maybe this is long enough? ya probably not but lets try again. 
 <div class="row">
     <ul style="list-style:none">
         @foreach (dynamic tweet in Model)
         {
-            <li>
+            <li style="display:inline">
                 <blockquote class="twitter-tweet">
                     <p lang="en" dir="ltr">
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-10"><h4>@tweet.User.Name</h4></div>
-                                <div class="col-md-2"><img src="@tweet.User.ProfileImageUrl" alt="Profile Picture" /></div>
-                                <div class="col-xs-12"><p>@tweet.Text</p></div>
+                                <div class="col-sm-10"><h5>@tweet.User.Name</h5></div>
+                                <div class="col-sm-2"><img src="@tweet.User.ProfileImageUrl" alt="Profile Picture" /></div>
+                                <div class="col-sm-12"><p>@tweet.Text</p></div>
                             </div>
                         </div>
 

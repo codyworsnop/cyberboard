@@ -77,10 +77,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="oAuthTwitterWrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\oAuthTwitterWrapper.1.0.2\lib\40\oAuthTwitterWrapper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -212,8 +208,30 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="wrapper\Authenticate.cs" />
+    <Compile Include="wrapper\AuthenticateSettings.cs" />
+    <Compile Include="wrapper\IAuthenticate.cs" />
+    <Compile Include="wrapper\IAuthenticateSettings.cs" />
+    <Compile Include="wrapper\IOAuthTwitterWrapper.cs" />
+    <Compile Include="wrapper\ISearchSettings.cs" />
+    <Compile Include="wrapper\ITimeLineSettings.cs" />
+    <Compile Include="wrapper\jsonTypes\AuthResponse.cs" />
+    <Compile Include="wrapper\jsonTypes\Description.cs" />
+    <Compile Include="wrapper\jsonTypes\Entities.cs" />
+    <Compile Include="wrapper\jsonTypes\Hashtag.cs" />
+    <Compile Include="wrapper\jsonTypes\Media.cs" />
+    <Compile Include="wrapper\jsonTypes\Search.cs" />
+    <Compile Include="wrapper\jsonTypes\TimeLine.cs" />
+    <Compile Include="wrapper\jsonTypes\Url.cs" />
+    <Compile Include="wrapper\jsonTypes\User.cs" />
+    <Compile Include="wrapper\jsonTypes\UserEntities.cs" />
+    <Compile Include="wrapper\jsonTypes\UserMention.cs" />
+    <Compile Include="wrapper\OAuthTwitterWrapper.cs" />
+    <Compile Include="wrapper\Properties\AssemblyInfo.cs" />
+    <Compile Include="wrapper\SearchSettings.cs" />
+    <Compile Include="wrapper\TimeLineSettings.cs" />
+    <Compile Include="wrapper\Utility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -251,24 +269,14 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Views\Manage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

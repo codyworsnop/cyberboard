@@ -54,3 +54,21 @@ blockquote.twitter-tweet img {
     height: 30px;
     width: 30px;
 }
+
+.about {
+    font: normal 16px Georgia, "Times New Roman", Palatino, serif;
+    color: #969696;
+}
+
+.about h2 {
+    text-decoration: underline;
+    color: #969696;
+}
+
+.summary {
+    margin-bottom: 20px;
+}
+
+.cody p, .amir p, .tyler p {
+    margin-top: 10px;
+}

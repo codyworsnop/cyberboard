@@ -15,9 +15,14 @@ namespace CyberBoard.Controllers
     {
         public ActionResult Index()
         {
-
+            string search = Request.QueryString["search"];
+            if(search == null || search == "")
+            {
+                System.Diagnostics.Debug.WriteLine("empty");
+                search = "Cyber Security";
+            }
             var wrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
-            wrapper.SearchSettings.SearchQuery = "Cyber Security";
+            wrapper.SearchSettings.SearchQuery = search;
 
             var results = wrapper.GetSearch();
 

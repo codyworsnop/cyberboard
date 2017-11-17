@@ -5,6 +5,11 @@
 }
 
 this is a text string that may or may not spane the entire screen and it would be cool if it just worked but things never just work so idk but any way here we go. lol it was hardly long enough so im adding more. maybe this is long enough? ya probably not but lets try again. 
+<div style="margin-bottom: 20px;">
+    <span style="color: white">Search Term</span>
+    <input id="search_term" value="Cyber Security" placeholder="Search Twitter" />
+    <button id="search_button" type="submit">Search</button>
+</div>
 <div class="row">
     <ul style="list-style:none">
         @foreach (dynamic tweet in Model)
@@ -14,10 +19,17 @@ this is a text string that may or may not spane the entire screen and it would b
                     <p lang="en" dir="ltr">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-sm-10"><h5>@tweet.User.Name</h5></div>
-                                <div class="col-sm-2"><img src="@tweet.User.ProfileImageUrl" alt="Profile Picture" /></div>
-                                <div class="col-sm-12"><p>@tweet.Text</p></div>
+                                <a href="https://twitter.com/@tweet.User.ScreenName">
+                                    <div class="col-sm-1"><img class="user-photo" style="border-radius: 50%;" src="@tweet.User.ProfileImageUrl" alt="Profile Picture" /></div>
+                                    <div class="col-sm-9"><h5 class="tweet-user">@tweet.User.Name</h5></div>
+                                </a>
+                                <div class="col-sm-2"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-256.png" alt="Twitter Icon" /></div>
                             </div>
+                            <a href="https://twitter.com/statuses/@tweet.id_str">
+                                <div class="col-sm-12">
+                                    <p style="height: 65px;">@tweet.Text</p>
+                                </div>
+                            </a>
                         </div>
 
                 </blockquote>
@@ -27,3 +39,10 @@ this is a text string that may or may not spane the entire screen and it would b
 
 
 </div>
+
+<script>
+    document.getElementById("search_button").addEventListener('click', function () {
+        var search_term = document.getElementById("search_term").value.toString();
+        window.location = window.location.href.split('?')[0] + "?search=" + search_term;
+    })
+</script>
